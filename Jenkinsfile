@@ -1,16 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Execution') {
             steps {
-                echo 'Hello Sameh! The webhook worked.'
-                sh 'echo "Building your project now..."'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-                sh 'echo "All tests passed!"'
+                sh 'node app.js'
             }
         }
     }
